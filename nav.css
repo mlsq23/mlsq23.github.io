@@ -7,6 +7,34 @@ ul li {
   margin-bottom: 5px;
   }
 
+  nav>ul li {
+    width: 150px; /*this is important to set so our drop-down doesn't go across the page*/
+    position: relative; /*we must add a position to our main navigation bar so we can position a drop-down properly */
+    text-align: center;
+    font-weight: bold;
+    color: #9D00D6;
+    }
+    nav ul li {
+    margin-bottom: 2px;
+    }
+    nav a {
+    text-decoration: none;
+    display: block;
+    border: 3px dotted #160029;
+    padding: 15px 15px 15px 15px;
+    }
+    
+    /*format all navigation <a> elements*/
+    nav a:link{
+    background-color: white;
+    }
+    nav a:hover, nav a:focus {
+    background-color: #ebebeb;
+    }
+    nav a:active{
+    background-color: #ebebeb;
+    }
+
   nav ul>li ul {
     position: absolute;
     margin-top: 0;
