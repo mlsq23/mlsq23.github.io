@@ -6,3 +6,15 @@ ul li {
   padding: 15px 15px 15px;
   margin-bottom: 5px;
   }
+
+  nav ul>li ul {
+    position: absolute;
+    margin-top: 0;
+    margin-left: 100%;
+    display: none;
+    }
+    
+    /*special hover to display the drop-down*/
+    nav>ul>li:hover>ul{
+    display: block;
+    }
