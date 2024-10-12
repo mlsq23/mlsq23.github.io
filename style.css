@@ -1,168 +1,87 @@
 @font-face { 
-
   font-family: fontName; /*this is where we give our font a name so we can use it!*/
-  
   src: url("font.ttf"); /*remember this is how we link to files in CSS!*/
-  
-  }
-  
+}
+
 /* General styles */
+.paragraph { color: #160029; }
+.heading { color: #9D00D6; }
+.background { color: #EBEBEB; }
 
-.paragraph {color: #160029;}
-
-.heading {color: #9D00D6;}
-
-.background {color: #EBEBEB;}
-
- 
-
-/* Flexbox layout for the page */
-
-.wrapper * {
-
-    background: #ebebeb;
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    margin-bottom: 1px;
-
-    margin-right: 1px;
-
-}
-
- 
-
+/* Grid layout for the page */
 .wrapper {
-
-    display: grid;
-
-    grid-template-columns: 1fr 5fr 2fr;
-
-    grid-template-rows: 5fr 20fr 5fr;
-
-    grid-gap: 10px;
-
-    height: 720px;
-
+  display: grid;
+  grid-template-columns: 1fr 5fr 2fr;
+  grid-template-rows: 5fr 20fr 5fr;
+  grid-gap: 10px;
+  height: 720px;
 }
 
- 
-
+/* Ensure header and footer take full width */
 header {
-
-    grid-column-start: 1;
-
-    grid-column-end: 4;
-
+  grid-column-start: 1;
+  grid-column-end: 4;
 }
-
- 
 
 footer {
-
-    grid-column-start: 1;
-
-    grid-column-end: 4;
-
+  grid-column-start: 1;
+  grid-column-end: 4;
 }
 
- 
+/* Flexbox layout for specific sections */
+.flex-container {
+  display: flex;
+  flex-direction: column; /* Ensure vertical alignment */
+  align-items: center; /* Center items */
+}
 
 /* Media query for mobile screens */
-
 @media only screen and (max-width: 640px) {
+  /* Style adjustments for mobile resolutions */
+  .wrapper {
+      display: block;
+      width: 100%;
+  }
 
-    /* Style adjustments for mobile resolutions */
+  .heading {
+      font-size: 1.5em;
+      text-align: center;
+  }
 
-    .wrapper {
+  .paragraph {
+      font-size: 1em;
+      padding: 10px;
+  }
 
-        display: block;
+  nav ul {
+      display: block;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      background-color: cadetblue;
+  }
 
-        width: 100%;
+  nav ul li {
+      display: block;
+      text-align: center;
+      width: 100%;
+  }
 
-    }
+  nav a {
+      display: block;
+      padding: 15px;
+      text-decoration: none;
+      color: white;
+      background-color: cadetblue;
+      border-bottom: 1px solid white;
+  }
 
- 
-
-    .heading {
-
-        font-size: 1.5em;
-
-        text-align: center;
-
-    }
-
- 
-
-    .paragraph {
-
-        font-size: 1em;
-
-        padding: 10px;
-
-    }
-
- 
-
-    nav ul {
-
-        display: block;
-
-        width: 100%;
-
-        padding: 0;
-
-        margin: 0;
-
-        background-color: cadetblue;
-
-    }
-
- 
-
-    nav ul li {
-
-        display: block;
-
-        text-align: center;
-
-        width: 100%;
-
-    }
-
- 
-
-    nav a {
-
-        display: block;
-
-        padding: 15px;
-
-        text-decoration: none;
-
-        color: white;
-
-        background-color: cadetblue;
-
-        border-bottom: 1px solid white;
-
-    }
-
- 
-
-    nav a:hover {
-
-        background-color: #8ec6c8;
-
-    }
-
+  nav a:hover {
+      background-color: #8ec6c8;
+  }
 }
 
-
+/* Print styles */
 @media print {
   body {
       margin: 0; /* Remove margins for printing */
