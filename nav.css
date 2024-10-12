@@ -82,3 +82,10 @@ nav > ul > li:hover > ul {
       display: none; /* Disable dropdown hover for mobile */
   }
 }
+
+/* Print styles for navigation */
+@media print {
+  nav, #hamburger {
+      display: none; /* Hide navigation when printing */
+  }
+}
