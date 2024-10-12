@@ -1,6 +1,5 @@
-@font-face { 
-  font-family: fontName; /*this is where we give our font a name so we can use it!*/
-  src: url("font.ttf"); /*remember this is how we link to files in CSS!*/
+body {
+  font-family: 'Times New Roman', Times, serif; /* Apply Times New Roman font */
 }
 
 /* General styles */
