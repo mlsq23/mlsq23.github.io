@@ -1,48 +1,149 @@
+/* Base navigation styles */
+
 ul li {
+
   display: block;
+
   border: 3px dotted #160029;
+
   width: 150px;
+
   list-style-type: none;
-  padding: 15px 15px 15px;
+
+  padding: 15px;
+
   margin-bottom: 5px;
+
+}
+
+
+
+nav>ul li {
+
+  width: 150px;
+
+  position: relative;
+
+  text-align: center;
+
+  font-weight: bold;
+
+  color: #9D00D6;
+
+  margin-bottom: 2px;
+
+}
+
+
+
+nav a {
+
+  text-decoration: none;
+
+  display: block;
+
+  border: 3px dotted #160029;
+
+  padding: 15px;
+
+  background-color: white;
+
+}
+
+
+
+/* Hover and focus styles for links */
+
+nav a:hover, nav a:focus {
+
+  background-color: #ebebeb;
+
+}
+
+
+
+/* Dropdown menu styles */
+
+nav ul>li ul {
+
+  position: absolute;
+
+  margin-top: 0;
+
+  margin-left: 100%;
+
+  display: none;
+
+}
+
+
+
+/* Show dropdown on hover */
+
+nav>ul>li:hover>ul {
+
+  display: block;
+
+}
+
+
+
+/* Responsive navigation for mobile */
+
+@media only screen and (max-width: 640px) {
+
+  nav ul {
+
+      padding: 0;
+
+      width: 100%;
+
   }
 
-  nav>ul li {
-    width: 150px; /*this is important to set so our drop-down doesn't go across the page*/
-    position: relative; /*we must add a position to our main navigation bar so we can position a drop-down properly */
-    text-align: center;
-    font-weight: bold;
-    color: #9D00D6;
-    }
-    nav ul li {
-    margin-bottom: 2px;
-    }
-    nav a {
-    text-decoration: none;
-    display: block;
-    border: 3px dotted #160029;
-    padding: 15px 15px 15px 15px;
-    }
-    
-    /*format all navigation <a> elements*/
-    nav a:link{
-    background-color: white;
-    }
-    nav a:hover, nav a:focus {
-    background-color: #ebebeb;
-    }
-    nav a:active{
-    background-color: #ebebeb;
-    }
+
+
+  nav ul li {
+
+      width: 100%;
+
+      display: block;
+
+      border: none;
+
+  }
+
+
+
+  nav a {
+
+      width: 100%;
+
+      border: none;
+
+      padding: 15px;
+
+      text-align: center;
+
+      background-color: cadetblue;
+
+      color: white;
+
+  }
+
+
 
   nav ul>li ul {
-    position: absolute;
-    margin-top: 0;
-    margin-left: 100%;
-    display: none;
-    }
-    
-    /*special hover to display the drop-down*/
-    nav>ul>li:hover>ul{
-    display: block;
-    }
+
+      display: none;
+
+  }
+
+
+
+  nav ul li:hover ul {
+
+      display: none; /* Disable dropdown hover for mobile */
+
+  }
+
+}

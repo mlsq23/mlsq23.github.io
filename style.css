@@ -1,66 +1,193 @@
+@font-face { 
+
+  font-family: fontName; /*this is where we give our font a name so we can use it!*/
+  
+  src: url("font.ttf"); /*remember this is how we link to files in CSS!*/
+  
+  }
+  
+/* General styles */
+
 .paragraph {color: #160029;}
 
 .heading {color: #9D00D6;}
 
 .background {color: #EBEBEB;}
 
+ 
+
+/* Flexbox layout for the page */
+
 .wrapper * {
+
     background: #ebebeb;
+
     display: flex;
+
     justify-content: center;
+
     align-items: center;
+
     margin-bottom: 1px;
+
     margin-right: 1px;
-  }
 
-  .wrapper {
+}
+
+ 
+
+.wrapper {
+
     display: grid;
+
     grid-template-columns: 1fr 5fr 2fr;
+
     grid-template-rows: 5fr 20fr 5fr;
+
     grid-gap: 10px;
+
     height: 720px;
-  }
 
-  header {
-    grid-column-start: 1;
-    grid-column-end: 4;
-  }
-  
-  footer {
-    grid-column-start: 1;
-    grid-column-end: 4;
-  }
+}
 
-  @media only screen and (max-width: 640px) {
-    header {
+ 
+
+header {
+
+    grid-column-start: 1;
+
+    grid-column-end: 4;
+
+}
+
+ 
+
+footer {
+
+    grid-column-start: 1;
+
+    grid-column-end: 4;
+
+}
+
+ 
+
+/* Media query for mobile screens */
+
+@media only screen and (max-width: 640px) {
+
+    /* Style adjustments for mobile resolutions */
+
+    .wrapper {
+
         display: block;
-        background-color: cadetblue;
+
         width: 100%;
+
     }
 
-    #hamburger {
-        display: inline-block;
-        padding: 10px;
+ 
+
+    .heading {
+
         font-size: 1.5em;
-        cursor: pointer; /* Change cursor to pointer */
-        color: white; /* Color of the hamburger */
+
+        text-align: center;
+
     }
+
+ 
+
+    .paragraph {
+
+        font-size: 1em;
+
+        padding: 10px;
+
+    }
+
+ 
 
     nav ul {
-        display: none; /* Hide the menu by default */
-        position: absolute; /* Position it absolutely */
-        width: 100%; /* Full width for mobile */
-        background-color: cadetblue; /* Background color for visibility */
-        padding: 0; /* Remove padding */
-        margin: 0; /* Remove margin */
+
+        display: block;
+
+        width: 100%;
+
+        padding: 0;
+
+        margin: 0;
+
+        background-color: cadetblue;
+
     }
 
-    nav ul.show {
-        display: block; /* Show when toggle is active */
-    }
+ 
 
     nav ul li {
-        float: none; /* Stack items vertically */
-        width: 100%; /* Full width for mobile items */
+
+        display: block;
+
+        text-align: center;
+
+        width: 100%;
+
     }
+
+ 
+
+    nav a {
+
+        display: block;
+
+        padding: 15px;
+
+        text-decoration: none;
+
+        color: white;
+
+        background-color: cadetblue;
+
+        border-bottom: 1px solid white;
+
+    }
+
+ 
+
+    nav a:hover {
+
+        background-color: #8ec6c8;
+
+    }
+
+}
+
+
+@media print {
+  body {
+      margin: 0; /* Remove margins for printing */
+      padding: 0; /* Remove padding for printing */
+  }
+
+  header, nav, footer {
+      display: none; /* Hide header, nav, and footer when printing */
+  }
+
+  /* Adjust font sizes for print */
+  h1 {
+      font-size: 24pt; /* Bigger title for print */
+  }
+
+  h2 {
+      font-size: 18pt; /* Adjusted size for subheadings */
+  }
+
+  p {
+      font-size: 12pt; /* Adjusted size for paragraphs */
+  }
+
+  /* Add page breaks */
+  .page-break {
+      page-break-before: always; /* Force page break */
+  }
 }
