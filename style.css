@@ -115,3 +115,9 @@ footer {
       padding: 5px 0; /* Add some padding for readability */
   }
 }
+
+body {
+  background-image: url('images/background.jfif'); /* Adjust the path as necessary */
+  background-size: cover; /* Make sure the image covers the entire background */
+  background-position: center; /* Center the image */
+}
