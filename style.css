@@ -130,3 +130,15 @@ footer {
 .footer-icon:hover {
   transform: scale(1.2); /* Increase size by 20% */
 }
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0; /* Add some margin around the video */
+}
+
+.video-container video {
+  max-width: 100%; /* Make the video responsive */
+  height: auto; /* Maintain aspect ratio */
+}
