@@ -19,7 +19,7 @@ nav > ul {
 }
 
 nav > ul li {
-  position: relative;
+  position: relative; /* Position relative for dropdown */
   text-align: center;
   font-weight: bold;
   color: #9D00D6;
@@ -41,15 +41,20 @@ nav a:hover, nav a:focus {
 
 /* Dropdown menu styles */
 nav ul > li ul {
-  position: absolute;
+  position: absolute; /* Position absolute for dropdown */
   margin-top: 0;
-  margin-left: 100%;
-  display: none;
+  margin-left: 0; /* Align the dropdown directly beneath the parent */
+  display: none; /* Hide dropdown by default */
+  background-color: white; /* Background color for dropdown */
+  border: 3px dotted #160029; /* Border for dropdown */
+  z-index: 1000; /* Ensure dropdown is on top */
 }
 
-/* Show dropdown on hover */
-nav > ul > li:hover > ul {
-  display: block;
+/* Show dropdown on hover (only for desktop) */
+@media (min-width: 641px) { /* Adjust the width as necessary */
+  nav > ul > li:hover > ul {
+      display: block; /* Show dropdown on hover */
+  }
 }
 
 /* Responsive navigation for mobile */
