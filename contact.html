@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <title>How To Get Through It - Contact</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="icon" href="images/download.jfif" type="image/x-icon">
+    <style>
+        /* Basic styles for the form */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            color: #333;
+        }
+
+        h1 {
+            color: darkmagenta;
+            text-align: center;
+        }
+
+        form {
+            max-width: 600px; /* Limit width for larger screens */
+            margin: 0 auto; /* Center the form */
+            padding: 20px;
+            border: 1px solid #ccc; /* Light border for the form */
+            border-radius: 5px; /* Rounded corners */
+            background-color: #f9f9f9; /* Light background */
+        }
+
+        label {
+            display: block; /* Block display for labels */
+            margin-bottom: 5px; /* Space below labels */
+            font-weight: bold;
+        }
+
+        input, textarea {
+            width: 100%; /* Full width inputs */
+            padding: 10px; /* Padding inside fields */
+            margin-bottom: 15px; /* Space between fields */
+            border: 1px solid #ccc; /* Light border for fields */
+            border-radius: 4px; /* Rounded corners for inputs */
+        }
+
+        button {
+            background-color: darkmagenta; /* Button color */
+            color: white; /* Button text color */
+            padding: 10px 15px; /* Padding for button */
+            border: none; /* No border */
+            border-radius: 4px; /* Rounded corners for button */
+            cursor: pointer; /* Pointer cursor on hover */
+            font-size: 16px; /* Font size for button */
+            display: block; /* Center the button */
+            margin: 0 auto; /* Center the button */
+        }
+
+        button:hover {
+            background-color: #9D00D6; /* Darker shade on hover */
+        }
+
+        /* Responsive styles */
+        @media only screen and (max-width: 640px) {
+            form {
+                margin: 10px; /* Adjust margin for mobile */
+                padding: 15px; /* Adjust padding for mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="heading">Hello and welcome to HowToGetThroughIt, the place where all first-time students who don’t know where to go, go!</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="references.html">References</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li>
+                    <a href="learn.html">Learn</a>
+                    <ul class="dropdown">
+                        <li><a href="#how-to-navigate">How to Navigate</a></li>
+                        <li><a href="#contact-advisor">Contact Advisor</a></li>
+                        <li><a href="#check-progress">Check Progress</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Contact Us</h1>
+        <form action="mailto:mlsq@umsystem.edu?subject=Portfolio/Professional Website Contact" method="post" enctype="text/plain">
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" name="first-name" placeholder="Your first name" required autofocus>
+
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" name="last-name" placeholder="Your last name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your email address" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" placeholder="Your message" required></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>© 2024 MeKayla Stephens, 
+            <span class="footer-icon">
+                <img src="images/email.jfif" alt="email" style="width: 16px; height: 16px; vertical-align: middle;">
+            </span>
+            mlsq@umsystem.edu 
+            <span class="footer-icon">
+                <img src="images/phone.jfif" alt="phone" style="width: 16px; height: 16px; vertical-align: middle;">
+            </span>
+            1+888-888-8888 All rights reserved.
+        </p>
+    </footer>
+</body>
+</html>
