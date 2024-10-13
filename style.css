@@ -120,3 +120,13 @@ footer {
       padding: 5px 0; /* Add some padding for readability */
   }
 }
+
+.footer-icon {
+  display: inline-block; /* Ensure the icon behaves like an inline-block element */
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Enlarge the icons on hover */
+.footer-icon:hover {
+  transform: scale(1.2); /* Increase size by 20% */
+}
